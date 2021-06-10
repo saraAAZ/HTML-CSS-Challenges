@@ -1,5 +1,6 @@
 * {
   font-family: sans-serif;
+  line-height: 20px;
 }
 
 header {
@@ -30,7 +31,7 @@ section {
 }
 
 img {
-  border: 5px solid #8075ff;
+  border: none;
 }
 
 h1,
@@ -76,6 +77,7 @@ footer {
 }
 
 .introduction {
+  background-color:white;
 }
 
 #badge {
@@ -85,53 +87,64 @@ footer {
   border-radius: 50%;
   display: inline-block;
   position: fixed;
-  bottom: 20px;
+  top: 20px;
   right: 20px;
-
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
+  transition: all .7s ease-out;
 }
 
 #badge:hover {
-  background-color: yellow;
+  background-color: rgb(216, 216, 34);
 }
 
 #badge p {
   text-align: center;
   font-size: 125%;
 }
-
 .image-container img {
   vertical-align: top;
-  border: 5px solid #747c92;
+  border: 5px solid;
 }
-
-.image-container img:first-of-type {
-  vertical-align: bottom;
+.image-container img:first-child{
+  border-color: teal;
 }
-
+.image-container img:nth-child(2){
+  border-color: rgb(211, 123, 211);
+}
+.image-container img:nth-child(3){
+  vertical-align: top;
+  border-color: yellowgreen;
+}
 .tigers {
-  background-color: #0b3c49;
-  color: #f0e100;
+  background-color: #E2F1F8;
+  color: #0E535D;
+
 }
 
 .giraffe {
-  background-color: #465775;
-  color: #56e39f;
+  background-color: #483C46;
+  color: #BEEE62;
 }
 
-.giraffe h2 {
-  color: #ef6f6c;
+.giraffe h2, h3 {
+  color: #F4743B;
+}
+.giraffe :nth-child(7){
+  font-size :20px; 
+}
+.news>h2{
+  text-align: center;
 }
 
 .card {
   display: inline-block;
   background-color: white;
-  padding: 20px;
-  margin: 10px;
-  width: 30%;
+  padding: 17px;
+  margin: 8px;
+  width: 28%;
   border: 1px solid black;
   border-radius: 10px;
 }
@@ -155,7 +168,7 @@ footer {
 
 .education {
   height: 500px;
-  background-image: url("https://source.unsplash.com/1200x900/?tiger");
+  background-image: url("https://images.unsplash.com/photo-1562552476-8ac59b2a2e46?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -163,16 +176,34 @@ footer {
 }
 
 .education-container {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(156, 154, 154, 0.45);
   padding: 50px;
   max-width: 400px;
+  margin: 105px 0px 0px 750px;
+  border-radius: 20px;
 }
 
 .education-container h3,
 .education-container p {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  color: wheat;
+  text-align: center;
+}
+.education button {
+  border: none;
+  border-radius: 20px;
+  width: fit-content;
+  color: wheat;
+  background-color: #0E535D;
+  margin: 0 30%;
+  font-size: 15px;
+  
 }
 
+.education button:hover, .education button:focus{
+  background-color: rgb(64, 168, 168);
+
+}
 /*Membership*/
 
 .membership {
@@ -183,13 +214,20 @@ footer {
 .membership h2 {
   color: #ff3f00;
 }
+.membership p {
+  max-width: 700px;
+  margin: 1% 20%;
+}
 
 .membership strong {
   color: #ff7f11;
 }
 
 /*Programs*/
-
+.programs .programs__display{
+  display: flex;
+  flex-direction: row;
+}
 .programs .card {
   display: block;
 }
